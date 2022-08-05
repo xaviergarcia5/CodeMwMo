@@ -23,13 +23,13 @@ def read_mgfunction(filename):
     input filename, data type: str, 
     returns a list of floats 
     '''
-    print("Reading file" + filename); #to know what is inside
+    print("Reading file" + filename) #to know what is inside
     mglist = []#empty list
     with open(filename,'r') as data_file:
         data_file.readline()#to avoid the first line
         for line in data_file: 
             if len(line.split()) < 13 :
-                continue;
+                continue
             else:
                 data = line.split()[4]
                 mag = float(data)
